@@ -46,7 +46,7 @@ def add_border(width, height, bits_per_pixel, palette, pixel_data, border_width=
             for x in range(width):
                 color_index = pixel_data[y][x]
                 r, g, b = palette[color_index * 4:color_index * 4 + 3]
-                row.extend([b, g, r])  # BMP хранит цвета в порядке BGR
+                row.extend([r, g, b])
             # Выравнивание строки
             padding = (4 - (new_width * 3) % 4) % 4
             row.extend([0] * padding)
